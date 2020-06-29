@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OpenClosed\OCPDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleResponsability\SRPDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -53,8 +55,6 @@
     <Folder Include="DependencyInversion\" />
     <Folder Include="InterfaceSegregation\" />
     <Folder Include="LiskovSubstitution\" />
-    <Folder Include="OpenClosed\" />
-    <Folder Include="SingleResponsability\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TakeAway.txt" />

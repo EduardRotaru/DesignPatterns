@@ -1,1 +1,4 @@
-﻿
+﻿SRP.
+-- Responsable for one thing and one reason to change
+OCP
+-- Parts of the system are open for extension but close for modification, avoiding just adding new things in a class.
