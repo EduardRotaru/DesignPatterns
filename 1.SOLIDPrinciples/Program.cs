@@ -1,4 +1,6 @@
-﻿using _1.SOLIDPrinciples.OpenClosed;
+﻿using _1.SOLIDPrinciples.DependencyInversionBad;
+using _1.SOLIDPrinciples.LiskovSubstitution;
+using _1.SOLIDPrinciples.OpenClosed;
 using _1.SOLIDPrinciples.SingleResponsability;
 using System.Diagnostics;
 using static System.Console;
@@ -9,7 +11,7 @@ namespace _1.SOLIDPrinciples
     {
         static void Main(string[] args)
         {
-            OPC();
+            DIP();
         }
 
         static void SRP()
@@ -57,6 +59,23 @@ namespace _1.SOLIDPrinciples
             {
                 WriteLine($" - {item._name} is {item._color}");
             }
+        }
+         
+        static void LSP()
+        { 
+            var rectangle = new Rectangle(2,3);
+
+            WriteLine($"{rectangle} has area {LSPDemo.Area(rectangle)}");
+
+            Square sq = new Square(); // Its perfectly fine to replace Square with parent class Rectangle but it breaks LSP (we always should be able to upcast to a base class)
+            sq.Width = 4;
+            WriteLine($"{sq} has area {LSPDemo.Area(sq)}");
+
+        }
+
+        static void DIP()
+        {
+            Research.DIPBadExample();
         }
     }
 }
