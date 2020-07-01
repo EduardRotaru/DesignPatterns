@@ -14,7 +14,7 @@ namespace _1.SOLIDPrinciples
             DIP();
         }
 
-        static void SRP()
+        public static void SRP()
         {
             var j = new Journal();
             j.AddEntry("I cried today");
@@ -26,8 +26,7 @@ namespace _1.SOLIDPrinciples
             p.SaveToFile(j, filename, true);
             Process.Start(filename);
         }
-
-        static void OPC()
+        public static void OPC()
         {
             var apple = new Product("Apple", Color.Green, Size.Small);
             var tree = new Product("Tree", Color.Green, Size.Large);
@@ -60,20 +59,17 @@ namespace _1.SOLIDPrinciples
                 WriteLine($" - {item._name} is {item._color}");
             }
         }
-         
-        static void LSP()
-        { 
-            var rectangle = new Rectangle(2,3);
+        public static void LSP()
+        {
+            var rectangle = new Rectangle(2, 3);
 
             WriteLine($"{rectangle} has area {LSPDemo.Area(rectangle)}");
 
             Square sq = new Square(); // Its perfectly fine to replace Square with parent class Rectangle but it breaks LSP (we always should be able to upcast to a base class)
             sq.Width = 4;
             WriteLine($"{sq} has area {LSPDemo.Area(sq)}");
-
         }
-
-        static void DIP()
+        public static void DIP()
         {
             Research.DIPBadExample();
         }

@@ -1,0 +1,18 @@
+﻿Overview
+-- Object creation gets too convoluted
+-- Constructor is not descriptive
+	-- Name mandated by name of containing type
+	-- Cannot overload the constructor with the same set of arguments with different names
+	-- Can turn into optional paramter hell, meaning adding a lot of optional paramters to the constructor, because confusing and tedious
+Object creation (not piece-wise like Builder) can be outsourced to	
+	-- A separate function Factory Method
+	-- That may exists in a separate class Factory
+	-- Can create hierarchy of factory with Abstract Factory
+
+Factory - A component responsible solely for wholesale(not piece-wise) creation of objects.
+
+Summary 
+-- Factory Method - A factory method is a static method that creates objects, it has certain advantages instead of making a simple constructor
+-- A factory can take care of object creation 
+-- A factory can be external or reside inside the object as an inner class
+-- Hierarchies of factories can be used to create related objects

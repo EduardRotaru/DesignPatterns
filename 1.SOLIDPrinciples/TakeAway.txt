@@ -8,4 +8,25 @@ ISP
 -- Interfaces should be segregated so no one has to implement interfaces that have functionality we don't need
 -- Break big interfaces in smaller interfaces
 DIP
+-- High level parts of the system should not depend directly on low level parts of the system but it should dependent instead on abstractions
 
+Summary:
+SRP
+-- A class should only have one reason to change
+-- Separation of concerns - different classes handling different, independent tasks/problems
+OCP
+-- Classes should be closed for modificationbut open for extension
+-- If we have a class that we know it works its a bad idea to come and modifying.
+-- If we can add interfaces or use DI its not worth modifying the existing class
+LSP
+You should be able to substitute a base type for a subtype
+OOP requires that you should be able to cast a descendat to its base on a variable of type base 
+	and it should still work properly, making certain things virtual.
+ISP
+-- Don't add to much into an interface; split into separate interfaces
+-- Don't force implementations that are not needed.
+DIP
+-- High level modules should not depend upon low-level ones; use abstractions
+-- If you have implementation details we shouldn't expose them directly
+-- Is the ability to change the internals through interfaces 
+-- High level modules can take those intefaces and use them without knowing anything about those low level implementations
