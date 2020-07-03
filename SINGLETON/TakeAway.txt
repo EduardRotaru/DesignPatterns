@@ -1,0 +1,26 @@
+﻿When discussing which patterns to drop we found that we still love them all.
+(Not really-I am in favor of dropping Singleton. Its use is almost always a design smell.)
+-- Erich Gamma
+
+Motivation
+For some components it only makes sense to have one in the system
+	Database repository
+	Object factory
+Ex: the constructor call is expensive
+	We only do it once
+	We provide everyone with the same instance
+Want to prevent anyone creating additional copies
+Need to take care of lazy instantiation and thread safety.
+
+Singleton is a component which is instantiated only once. 
+
+Summary:
+Making a safe(lazy) singleton is easy construct a static Lazy<T> and return its Value
+First example
+
+Singleton are hard to test and if they are hardcoded in the design it will be really difficult to change it   
+Instead of directly using a singleton, consider depending on an abstraction (interfaces) (Dependency Inversion)
+	Instead of feeding singleton class feed a fake object
+Consider definiting singleton lifetime in DI container  
+	It will be injected in every component which will be injected into every component which requires a singleton as a single instance and no more than one instance will be created.   
+

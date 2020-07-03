@@ -1,0 +1,10 @@
+﻿Tokyo
+3000000
+Londra
+230000
+Osaka
+450000
+Seol
+120000
+Mexico City 
+111111

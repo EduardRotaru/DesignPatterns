@@ -157,15 +157,16 @@ namespace PROTOTYPE
             //WriteLine(jane2);
 
             // this is a lot of work if there are too many classes
-            var jane3 = john.DeepCopy();
-            jane3._address._houseNumber = 3213;
+            //var jane3 = john.DeepCopy();
+            //jane3._address._houseNumber = 3213;
 
-            WriteLine(jane3);
+            //WriteLine(jane3);
 
             var jane4 = john.DeepCopyXml();
             jane4._names[0] = "Jane";
             jane4._address._houseNumber = 77;
 
+            WriteLine(john);
             WriteLine(jane4);
 
         }
