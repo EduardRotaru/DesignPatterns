@@ -1,0 +1,16 @@
+﻿Structural design patterns
+
+All about getting the interface you want from the interface you have 
+Simple representation 
+	Power adaptors have different power (interface) requirements
+		Voltage (5V, 220V)
+		Socket/plug type(Europe UK USA)
+We cannot modify our gadgets to support every possible interface
+Thus we use a special device(adapter) to give us interface we require from the interface we have
+Adapter: A construct which adapts an existing interface X to comfort to the required interface Y
+
+Summary:
+Determine the API you have and the API you need
+Create a component which aggregates(has a reference to, ..) the adaptee
+Intermediate represensations can pile up: use caching and other optimization like cleaning up the memory when its no longer required
+
