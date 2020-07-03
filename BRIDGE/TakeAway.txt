@@ -1,0 +1,34 @@
+﻿Concept of connecting different components through abstraction(interface, abstract class)
+
+Motivation:
+Prevents a "Cartesian Product" complexity explosion
+Base class ThreadScheduler
+Can be preemptive or cooperative
+Can run on Windows or Unix
+End up with a 2x2 scenario: WindowsPTS, UnixPTS, WindowsCTS, UnixCTS (We end up with 4 classes)
+Is called cartesian product because if we have 3 criteria, we end up with 8 classes
+Bridge pattern avoids the entity explosion
+
+ThreadScheduler -> PeemptiveThreadScheduler 
+						-> UnixPTS
+						-> Windowspts
+				-> CooperativeThreadScheduler
+						-> UnixPTS
+						-> Windowspts
+
+This needs to be avoided
+
+ThreadScheduler -> PeemptiveThreadScheduler (-platformScheduler)
+				-> CooperativeThreadScheduler (-platformScheduler)
+				-> IPlatformScheduler
+						-> UnixScheduler
+						-> WindowsScheduler
+
+Summary:
+Decoupling abstraction from implementation 
+Both can exist as their own heirarchies, simply take the  funtionality related to the operating systems take them out outside the main inheritance hierarchy
+	and have them as separate hierarchy that you can refer to, so essentially we have abstraction with their own hierarchy and implementation with another hierarchy
+	and then use aggregation to have one reference one to another
+A stronger form of encapsulation, a more neater way to perform encapsulation by compertamalization different parts of the system
+	that you have to encapsulate instead of going with inheritance
+
