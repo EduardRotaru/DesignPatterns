@@ -1,0 +1,26 @@
+﻿Just like other design patterns decorator pattern tries to add behavior to existing classes without altering the classes themselves
+Jumpign back in the code that was already written and tested and altering that code is not a great idea because is already used by people 
+
+Decorator is about adding behavior on the side without actually altering the origin of the component
+Motivation:
+We want to augment an object with additional functionality
+Do not want to rewrite or alter the existing code OCP
+We want to keep the existing functionality separate SRP
+We need to be able to interact with existing structures
+Two options:
+	- if we have a class that is not sealed we can inherit from required object if possible; some objects are sealed. (StringBuilder is sealed)
+	- build a decorator, which simply references the decorated objects and it provides additional functionality 
+
+Decorator - Facilitates the addition of behaviors to individual objects without inheriting from them.
+
+Summary:
+A decorator keeps a reference to the decorated object(s) that it decorates
+It may or may not proxy over calls, may or may not replicate the API of original object, cannot cast a decorator to the original object because there is no inheritance
+	wether or not you want to replicate the API if you decorate the stringbuilder it depends if we really need all the members 
+		Resharper helps generate delegated members, both helps you setup these classes decorators where you take a component and decorated it and also emulate multiple inheritances by effectively implementing
+		two interfaces and having two members aggregates and generating the interfaces for both of them (clahses between two interfaces are solvable)
+Exists in a static function
+	X < Y <Foo>>
+	very limited due to the inability to inherit from type parameters
+		 
+
