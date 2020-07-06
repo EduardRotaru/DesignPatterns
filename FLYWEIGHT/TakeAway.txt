@@ -1,0 +1,22 @@
+﻿Goal
+Space optimization
+
+Motivation
+Avoid redundacy when storing data
+E.g MMORPG
+	- Plenty of users with identical names
+	- No sense in storing same names over and over again
+	- Store a list of names and pointers to them (references, indexes)
+.Net performs string interning, so an indetical string is stored only once
+E.g bold or italic text in console
+	Dont want each character to have a formatting character
+	Operate on ranges(line number, start/end position)
+
+Flyweight a space optimization tehcnique that lets us use less memory by storing externally the data associated with similar objects.
+	- avoid duplication of data, database optimization approach
+
+Summary:
+If you have any data which is common then you try to store the data externally then you try to minimze the data you store
+	In the case of strings you can define the idea of ranges on homogenous collections and store data related to those ranges 
+		If you have a collection of elements and you want to change a certain part of these elements in a particular way you define a range
+			.NET string interning is the Flyweight pattern

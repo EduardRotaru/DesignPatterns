@@ -1,0 +1,20 @@
+﻿Facade pronounced as fasade
+Exposing several components through a single interface
+
+Motivation:
+Balancing complexity and presensation/usability
+Typical home
+	Many subsystems
+	Complex internal structure	
+	End user is not exposed to internals
+Same with software
+	Many systems working to provide flexibility but..
+	API consumers want it to just work
+
+Provides a simple easy to understand/user interface over a large and sophisticated body of code
+
+Summary:
+To provide a simplified API over a set of classes or bigger subsystems, no matter how I scale it
+May wish to expose internally though the facade
+May allow users to escalate to more complex APIs if they need to
+
