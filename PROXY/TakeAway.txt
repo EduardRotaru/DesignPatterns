@@ -1,0 +1,28 @@
+﻿An interface for accessing a particular resource
+Motivation 
+You are calling foo.Bar()
+This assumes that foo is in the same process as Bar()
+What if, later on, you want to put all Foo-related operations into a separate process
+	Can you avoid changing your code?
+Proxy to the rescue!
+	Same interface, entirely different behavior, so in this case the proxy provided in place of Foo like RemoteFoo : IFoo
+This is called a communcation proxy, something that substitute a different execution model,
+	the invocations appear to be local but they aren't, when I call FooBar what Bar() does it takes all the arguments and put them in a serializable structure
+	Other types logging, virtual, guarding(something check access control if someone calls a certain method)
+
+Proxy A class that functions as an interface to a particular resource.
+	That resource may be remote, expensive to construct or may require logging or some other added functionality
+	Once again this is the idea of providing additional functionality to the object but the nature of that object does have to intresective to the object itself
+	E.g protection proxy over all your object and have auth rules so you that you specify some sort of custom security policy so only some people can touch parts of API
+
+Proxy vs Decorator
+The differences
+	Poxy provides an indentical interface; decorator provides an enhanced interface
+	Decorator typically aggregates (or has reference to) what it is decorating; poxy doesn't have to
+	Proxy might not even be working with a materialized object
+
+Summary:
+	Has the same interface as the underlying object
+	To create a proxy class you typically just replicate the existing interface of an object 
+	Add relevant functionality to the redefined member functions 
+	Different proxies (communication, logging, caching etc) have completely different behaviors
