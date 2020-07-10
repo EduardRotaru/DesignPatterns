@@ -1,1 +1,29 @@
-﻿
+﻿Chai of responsability
+Motivation
+Work for a car company and decide when someone does emission test on your cars and your computer is gonna lie
+Unethical behavior by an employee; who takes the blame? Chain of responsability..
+	Employee
+	Manager
+	CEO
+You click a graphical element on a form
+	Button handles it, stop further processing
+	Underlying group box
+	Underlying window
+CCG computer game
+	Creature has attack and defense value
+	Those can be boosted by other cards
+Chain of responsability
+A chain of components who all get a chance to process a command or a query, optionally
+having a default processing implementation and an ability to terminate the processing chain.
+
+Command Query Separation
+The idea is whenever we operate on object we separate all the invokations in two different concepts
+Query and Command
+Command asking for an action or change(please set your attack value to 2)
+Query asking for information(please me your attack value)
+CQS having separate means of sending commands and queries to e.g direct field access
+
+Summary:
+Chai of responsability can be implemented as a chain of references or a centralized construct
+Enlist objects in the chain, possibly controlling their oder 
+Object removal from chain e.g Dispose()
