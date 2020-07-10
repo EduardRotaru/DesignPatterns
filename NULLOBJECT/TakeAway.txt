@@ -1,0 +1,18 @@
+﻿Behavior design with no behavior, structural pattern
+Motivation
+When Component A usees Component B it typically assumes B is non-null
+	You inject B, not B? or some Option<B>
+	you do not check for null(?.) on every call
+There is no option of telling A not to use an instance of B 
+	its use is hard-coded
+Thus, we build a no-op, non-functioning inheritor of B and pass it into A
+A no-op object that comforms to the reuquired interface, satisfying a dependency requirement of some other object
+	but does absolutely nothing
+Summary
+To built Null object implement the required interface
+Rewrite the methods with empty bodies
+	If the method is non void, return default(T)
+	If these values are ever used, you are in trouble
+Supply an instance of NullObject in place of actual object
+Dynamic construction possible
+	With associated performance implications
