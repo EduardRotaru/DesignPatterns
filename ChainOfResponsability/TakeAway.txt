@@ -24,6 +24,6 @@ Query asking for information(please me your attack value)
 CQS having separate means of sending commands and queries to e.g direct field access
 
 Summary:
-Chai of responsability can be implemented as a chain of references or a centralized construct
+Chain of responsability can be implemented as a chain of references or a centralized construct
 Enlist objects in the chain, possibly controlling their oder 
 Object removal from chain e.g Dispose()
