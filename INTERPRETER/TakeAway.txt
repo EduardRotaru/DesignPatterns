@@ -1,0 +1,26 @@
+﻿Textual inputs needs to be processed
+	To turn textual input into executables, to turn your regular expressions into state machines
+	All of this needs to be parsed into OOP structures 
+Some examples
+	Programming language compilers, interpreters and IDEs, 
+		They have to interpret source code into OOP representation, walk traverse and figure out whats going on
+	HTML, XML and similar, we need to have interpreters to turn this into OOP representation
+		XLINQ can parse the whole thing and represent it with a LINQ like API and can perform searching on XML document
+	Numeric expression(3+4/5)
+	Regular expressions, something has to parse them, turn them into state machine and apply state machine
+	Turning strings into OOP based structures is a complicated process
+Interpreter = A component that processes structed text data. Does so by turning into separate lexical tokens(lexing) and then interpreting sequnces of said tokes(parsing)
+
+Summary:
+Barring simple cases, an interpreter acts in two stages
+Lexing turns into a set of tokens
+	e.g 3*(4+5) -> Lit[3] Star Lparen Lit[4] Plus Lit[5] Rparen
+Parsing tokens into meaningful constructs
+	-> MultiplicationExpression[
+		Integer[3],
+		AdditionalExpression[
+			Integer[4], Integer[5]
+		]
+	] (abstract syntax tree)
+
+This parse can be traversed, transformed.

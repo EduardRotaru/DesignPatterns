@@ -1,0 +1,22 @@
+﻿Memento
+Keep a memento of an object's state to return to that state
+Motivation
+An object or system goes through changes
+	E.g a bank account gets deposits and withdrawals
+There are different ways of nagivating those changes
+One way is to record every change (command) and teach a command to 'undo' itself
+Another is to simple save snapshots of the system
+
+Memento
+A token/handle represint the system state. Lets us roll back to the state when the token was generated.
+May or may not be directly expose state information
+But its an immutable construct, it will provide enough information from the system but won't allow you to change the system unless
+	I take the token and sticking back in the system and asking explicitily to roll itself back
+
+Summary
+Mementos are used to roll back states arbitraly
+A memento is simply a token/handle class with typically no functions (immutable readonly properties)
+A memento is not required to expose directly the state(s) to which it reverts the system
+	in .net is difficult to hide the state unless I am using internal visibility in some sort of outside class
+Memento return a piece of API, everything you return from an API  has to be accesable to some degree
+Can be used to implement undo/redo if we save when every memento happens and the system changes
