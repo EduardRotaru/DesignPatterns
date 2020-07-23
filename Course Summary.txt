@@ -1,0 +1,22 @@
+All patterns:
+
+Creational Patterns
+Builder 
+		- Separated component for when object construction gets too complicated
+		- If I find I am making the construction of an object too complicated, too many arguments, or optional or too much logic in the constructor, then:
+			we can take the logic out in a separate component called builder
+		- Can create mutually cooperating sub-builders
+		- Often has a fluent interface, returning this at the end of every single invokation
+			this makes it easier for clients to construct their object in the same statement while adding contiginous parts to the object itself
+
+Factories
+		- Factory method more expressive than a constructor because a factory method can have a name
+		that is different from the containing class it can also have overloads of similar arguments as a result
+		- Factory can be an outside class or inner class; inner class has the benefit of accessing private members and that benefits the encapsulating concept
+Prototype
+		- Creation of object from an existing object
+		- Requires either explicit deep copy or copy through serialization
+Singleton
+		- When you need to ensure just a single instance exists
+		- Made thread-safe and lazy with Lazy<T>
+		- Consider extracting interface or using DI

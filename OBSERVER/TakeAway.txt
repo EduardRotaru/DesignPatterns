@@ -1,0 +1,19 @@
+﻿Motivation
+We need to be informed when certain things happen
+	Object property changes
+	Object does something
+	Some external event occurs
+We want to listen to events and notified when they occur
+Built into C# with the event keyword
+	But then what is this IObserable<T>/ IObserver<T> for?
+	What about INotifyPropertyChanging/Changed?
+	And what are BindingList<T>/ObserverCollection<T>?
+Observer An observer is an object that wishes to be informed about events happening 
+in the system. The entity generating the events is an observable.
+
+Summary:
+Observer is an intrusive approach: an obserable must provide an event to subscribe to
+An observer must make modifications to itself to provide events or some sort of hooks for external components to subscribe
+Special care must be taken to prevent issues in multithreaded scenarios
+.Net comes with observable collections
+IObserver<T>/IObervable<T> are used in stream processing(reactive extensions)

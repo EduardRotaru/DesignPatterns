@@ -111,5 +111,5 @@ namespace MEMENTO
         }
     }
 
-    // 
+    // memento used for interop
 }
